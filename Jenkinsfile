@@ -1,6 +1,6 @@
 properties([
     pipelineTriggers([githubPush()])
-
+    ])
 node {
     stage('Checkout') {
         checkout scm
