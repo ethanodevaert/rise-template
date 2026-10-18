@@ -112,7 +112,7 @@ catch (Exception ex)
 }
 finally
 {
-    Log.CloseAndFlush();
+    Log.CloseAndFlush();  
 }
 
 
