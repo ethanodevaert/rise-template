@@ -1,6 +1,5 @@
 properties([
-    pipelineTriggers([pollSCM('H/2 * * * *')])
-])
+    pipelineTriggers([githubPush()])
 
 node {
     stage('Checkout') {
