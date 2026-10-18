@@ -32,6 +32,7 @@ try
                                    throw new InvalidOperationException("Connection string 'DatabaseConnection' not found.");
             o.UseNpgsql(connectionString); // Swap Sqlite for your database provider (e.g. Sql Server, MySQL, PostgreSQL, etc.).
             o.EnableDetailedErrors();
+            o.ConfigureWarnings(w => w.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning)); 
             if (builder.Environment.IsDevelopment())
             {
                 o.EnableSensitiveDataLogging(); // only enabled in development.
