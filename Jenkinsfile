@@ -1,6 +1,7 @@
 properties([
     pipelineTriggers([githubPush()])
-    ])
+])
+
 node {
     stage('Checkout') {
         checkout scm
@@ -22,6 +23,7 @@ node {
                 sh '''
                     docker run -d --name rise-app --network rise-net --restart on-failure:10 \
                       -p 5000:8080 \
+                      -e ASPNETCORE_ENVIRONMENT=Development \
                       -e "ConnectionStrings__DefaultConnection=Host=$DB_HOST;Port=5432;Database=$DB_NAME;Username=$DB_USER;Password=$DB_PASSWORD" \
                       rise-app
                 '''
@@ -35,4 +37,4 @@ node {
             sh 'curl -fsS http://172.17.0.1:5000/ > /dev/null'
         }
     }
-}  
+}
