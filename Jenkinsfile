@@ -27,7 +27,7 @@ node {
                       -e "ConnectionStrings__DefaultConnection=Host=$DB_HOST;Port=5432;Database=$DB_NAME;Username=$DB_USER;Password=$DB_PASSWORD" \
                       rise-app
                 '''
-            }
+            }  
         }
     }
 
