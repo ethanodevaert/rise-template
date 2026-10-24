@@ -36,5 +36,5 @@ node {
             sleep 5
             sh 'curl -fsS http://172.17.0.1:5000/ > /dev/null'
         }
-    }
+    }  
 }  
