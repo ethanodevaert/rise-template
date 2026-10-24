@@ -1,5 +1,5 @@
 # Rise - [GROUPNAME]
-
+  
 ## Team Members
 
 - [MEMBER1_NAME] - [MEMBER1_EMAIL] - [MEMBER1_GITHUB_USERNAME]
